@@ -1,0 +1,19 @@
+{
+  "name": "todo-api-node-es6",
+  "version": "1.0.0",
+  "description": "https://medium.com/@purposenigeria/build-a-restful-api-with-node-js-and-express-js-d7e59c7a3dfb",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhatibi/todo-api-node-es6.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bhatibi/todo-api-node-es6/issues"
+  },
+  "homepage": "https://github.com/bhatibi/todo-api-node-es6#readme"
+}
