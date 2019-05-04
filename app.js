@@ -1,7 +1,11 @@
 import express from 'express';
 import db from './db/db';
+import bodyParser from 'body-parser';
 
 const app = express();
+// Parse incoming requests data
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // get all todos
 app.get('/api/v1/todos', (req, res) => {
