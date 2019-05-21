@@ -17,8 +17,8 @@ let targetBalance = 150;
 
 let maxBets = 200;
 let i=0;
-// for (i = 0; i < numBets; i++) {
-while(balance < targetBalance && i < maxBets && balance >= minimumBalance) {
+for (i = 0; i < numBets; i++) {
+//while(balance < targetBalance && i < maxBets && balance >= minimumBalance) {
     let displayMessage = `[[ Spin `+(i+1)+` ]]`;
     console.log(displayMessage.yellow);
     if (betAmount > balance && balance > minimumBetAmount) {

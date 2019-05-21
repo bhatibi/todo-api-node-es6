@@ -2,14 +2,15 @@ import board from './board';
 import boardColors from './boardColors';
 import colors from 'colors';
 
-let minimumBetAmount = 2;
+let minimumBetAmount = 1;
 //let betAmountRed = 2;          // initialize bet
 //let betAmountBlack = 2;
 let balance = 200;
 let maxBetAmount = 128;
 let maxBalanceReached = balance;
-//let minimumBalance = 10;
+let minimumBalance = 10;
 let numBets = 100;
+let targetBalance = 300;
 
 let betRed = {
     color: boardColors.red,
@@ -22,8 +23,9 @@ const betBlack = {
 };
 
 let i;
-for (i = 0; i < numBets; i++) {
-// while(balance < targetBalance && i < maxBets && balance >= minimumBalance) {
+//for (i = 0; i < numBets; i++) {
+i=1;
+while(balance < targetBalance && /*i < maxBets &&*/ balance >= minimumBalance) {
     let displayMessage = `[[ Spin `+(i+1)+` ]]`;
     console.log(displayMessage.yellow);
     
@@ -94,6 +96,8 @@ for (i = 0; i < numBets; i++) {
     }
     console.log('After spin ' + (i+1) +': balance -> ' + balance);
     console.log('_____________________________________________________________________________________________________');
+
+    i++;
 }
 
 //console.log('Num iterations: ' + i);
