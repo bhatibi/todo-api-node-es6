@@ -23,7 +23,7 @@ app.post('/api/v1/todos', (req, res) => {
             success: 'false',
             message: 'title is required'
         });
-    } else if(!req.body.description) {
+    } else if (!req.body.description) {
         return res.status(400).send({
             success: 'false',
             message: 'description is required'
@@ -41,6 +41,26 @@ app.post('/api/v1/todos', (req, res) => {
         success: 'true',
         message: 'todo added successfully',
         todo
+    });
+});
+
+// get single todo 
+app.get('/api/v1/todos/:id', (req, res) => {
+    const id = parseInt(req.params.id, 10);
+
+    db.map((todo) => {
+        if (todo.id === id) {
+            return res.status(200).send({
+                success: 'true',
+                message: 'todo retrieved successfully',
+                todo
+            });
+        }
+    });
+
+    return res.status(404).send({
+        success: 'false',
+        message: 'todo does not exist',
     });
 });
 
